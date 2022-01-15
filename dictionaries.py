@@ -1,3 +1,4 @@
+#dictionary: unorderd mutable
 my_dict = {"name": "max", "age":25, "city":"new york"}
 print(my_dict)
 
@@ -65,3 +66,12 @@ my_dict1.update(my_dict2)
 print(my_dict1)
 #this goes through the new dict and find any key thts not in the dictionary to be updated and it add it to it, for the keys that are already present in dict1, the values are overwriten
 
+my_dict2 = {3:9, 6:36,9:81}
+
+# you can pass in a tuple into a dictionary
+mytuple = (8,7)
+my_dict3 = {mytuple:15}
+print(my_dict3)
+
+
+#you cannot pass in  a list because its mutable, therefore not hashable
