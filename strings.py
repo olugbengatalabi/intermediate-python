@@ -48,3 +48,30 @@ mylist3 = stringy1.split("a")
 mylist4 = " ".join(mylist2)
 # concatenates all of our elements in the list, with the seprator being what is passwed between the " "
 print(mylist4) 
+
+#HOW TO KNOW THE TIME IT TOOK TO EXECUTE A CODE
+from timeit import default_timer as timer
+start = timer()
+mylist4 = " ".join(mylist2)
+stop = timer()
+print(stop-start)
+
+
+#string formating with f stringss
+#1 using %
+var = 3.123
+var2 = 5.555
+my_string = "the variable is %f" %var
+print(my_string)
+my_string2 = "the variable is %.2f" %var
+#print in 2 decimal places
+print(my_string2)
+
+#2 using the .format method
+my_string3 = "the variables are {:.2f} and {}".format(var, var2)
+print(my_string3)
+
+#3 with the f string
+my_string4 = f"the variable is {var} and {var2 * 2}"
+#print in 2 decimal places
+print(my_string4)
