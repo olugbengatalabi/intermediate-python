@@ -1,0 +1,25 @@
+import logging
+import time 
+from logging.handlers import TimedRotatingFileHandler
+
+#A timedrotating filehandler  creates a rotating log based on how much time has passed 
+
+
+#create your logger
+logger = logging.getLogger(__name__)
+
+#set its level
+logger.setLevel(logging.INFO)
+
+#roll over after 2kb and keep backup logs
+handler = TimedRotatingFileHandler("timed_test.log", when = "s", interval=5, backupCount=5)
+# s , m ,h,d, midnight, w0 , w1.... w0 = monday
+
+#add the handlers you just created to the logger
+logger.addHandler(handler)
+
+
+
+for _ in range (10):
+  logger.info("hello world")
+  time.sleep(5)
