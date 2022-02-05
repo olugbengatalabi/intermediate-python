@@ -23,7 +23,7 @@ value = next(g)
 print(value)
 
 
-you can also use it to pass arguments into functions that take iterables 
+#you can also use it to pass arguments into functions that take iterables 
 
 print(sum(g))
 print(sorted(g)) 
